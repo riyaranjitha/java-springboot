@@ -1,0 +1,62 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+          steps{            
+
+           }
+        }
+    }
+}
+ stages {
+        stage('Test') {
+          steps{            
+
+           }
+        }
+    }
+}
+ stages {
+        stage('Quality Gate - Sonar Qube') {
+          steps{            
+
+           }
+        }
+    }
+}
+ stages {
+        stage('Deploy to Dev') {
+          steps{            
+
+           }
+        }
+    }
+}
+ stages {
+        stage('Deploy to UAT') {
+          steps{            
+
+           }
+        }
+    }
+}
+ stages {
+        stage('Staging') {
+          steps{            
+
+           }
+        }
+    }
+}
+ stages {
+        stage('Production') {
+          steps{            
+
+           }
+        }
+    }
+}
+
+
+
+
