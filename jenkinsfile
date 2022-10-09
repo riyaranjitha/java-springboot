@@ -1,15 +1,54 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'Build'
+            }
+        }
+    }
+    stage('Test') {
+            steps {
+                echo 'Test'
+            }
+        }
+    }
+    stage('Sonarqube') {
+            steps {
+                echo 'Sonarqube'
+            }
+        }
+    }
+    stage('Push to artifactory') {
+            steps {
+                echo 'Push to artifactory'
+            }
+        }
+    }
+    stage('Deoploy to   QA') {
+            steps {
+                echo 'Deploy to QA'
+            }
+        }
+    }
+    stage('Deploy to prodd') {
+            steps {
+                echo 'Deploy to prod'
             }
         }
     }
     post { 
-        always { 
-            echo 'I will always say Hello again!'
+     faillure { 
+            echo 'Failed'
         }
+    success { 
+            echo 'Success'
+        }
+    aborted { 
+             echo 'aborted'
+        }
+    always {
+             echo 'Failed'
+        }         
     }
 }
